@@ -1,0 +1,59 @@
+@media only screen and (min-width: 500px) {
+  .img_container {
+    float: left;
+    padding: 5%;
+  }
+  .title_class{
+      font-size: 48px;
+  }
+  .details_container {
+    float: center;
+    padding: 5%;
+    text-align: left;
+  }
+
+  .class_img {
+    height: 70%;
+    width: 20vmax;
+  }
+  .class_icon_container {
+    width: 53%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .icon_lbl {
+    font-size: 32px;
+  }
+  .main_container {
+    height: 90vmin;
+    background-size: cover;
+    background-color: "black";
+  }
+}
+@media only screen and (max-width: 500px) {
+    .img_container {
+        padding: 5%;
+      }
+  .class_img {
+    height: 90%;
+    width: 20vmax;
+  }
+  .details_container {
+    float: center;
+    padding: 5%;
+    text-align: left;
+  }
+  .class_icon_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .icon_lbl {
+    font-size: 15px;
+  }
+  .main_container {
+    height: 100%;
+    background-size: cover;
+    background-color: "black";
+  }
+}

@@ -1,0 +1,10 @@
+.like_button{
+ color: red;
+}
+.movie_name{
+height:20px;
+background-color: red;
+}
+.hover_movie_name{
+    height:0px;
+}

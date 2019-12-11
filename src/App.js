@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Nav from './components/search'
+import Nav from './components/navigation'
 import movie_List from "./pages/home/movie_List";
 import Login from "./pages/login/login";
 import movieDetails from "./pages/movieDetails/movie_details"
@@ -13,8 +13,8 @@ class App extends Component {
     <div className="App">
       <Nav></Nav>
         <Switch>
-          <Route exact path='/Login' component={Login}></Route>
-          <Route exact path='/' component={movie_List}></Route>
+          <Route exact path='/' component={Login}></Route>
+          <Route exact path='/home' component={movie_List}></Route>
           <Route exact path='/movie/:id' component={movieDetails}></Route>
         </Switch>
     </div>

@@ -13,7 +13,7 @@ class movieList extends React.Component {
     super(props);
     this.state = {
       hovered: false,
-      users: [],
+      Movies: [],
       liked:false
     };
   }
@@ -24,7 +24,7 @@ class movieList extends React.Component {
     )
       .then(response => response.json())
       .then(results =>
-       this.setState({ users: results.data }));
+       this.setState({ Movies: results.data }));
       
   }
 
@@ -38,29 +38,29 @@ class movieList extends React.Component {
   };
 
   render() {
-    let users = this.state.users;
+    let Movies = this.state.Movies;
 
  
     
     function sayHello() {
-      alert("lol");
+      alert(this.state.liked);
     }
   
   
     return (
       <div className="listContiner">
         {/* style={{backgroundImage:"url('https://vonnue.com/assets/img/kit/pro/bg9.jpg')"}} */}
-        {users.map(user => (
+        {Movies.map(Movie => (
           
           <Card 
             className="class_card"
             onMouseEnter={this.onMouseEnter}
             onMouseLeave={this.onMouseLeave}
           >
-            <Link to={"/movie/"+user.id} className='class_media'>
+            <Link to={"/movie/"+Movie.id} className='class_media'>
         
               <img
-                src={user.images[0] ? user.images[0].url : noImage}
+                src={Movie.images[0] ? Movie.images[0].url : noImage}
                 className="img_class"
                 alt="movie_image"
               ></img>
@@ -71,7 +71,7 @@ class movieList extends React.Component {
               <Play className="class_play" onClick={sayHello}></Play>
               <Like
                 className={
-                  user.meta.releaseYear > 2005 ? "class_like" : "class_Unlike"
+                  Movie.meta.releaseYear > 2005 ? "class_like" : "class_Unlike"
                 }
                 onClick={sayHello}
               ></Like>

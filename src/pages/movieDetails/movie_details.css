@@ -2,19 +2,23 @@
   .img_container {
     float: left;
     padding: 5%;
+    padding-top: 10%;
+    height: 350px;
   }
-  .title_class{
-      font-size: 48px;
+  .title_class {
+    font-size: 48px;
   }
   .details_container {
     float: center;
     padding: 5%;
+    padding-top: 10%;
     text-align: left;
   }
 
   .class_img {
-    height: 70%;
-    width: 20vmax;
+    height: 100%;
+    width: 18vmax;
+    border: 2px solid grey;
   }
   .class_icon_container {
     width: 53%;
@@ -25,28 +29,71 @@
     font-size: 32px;
   }
   .main_container {
-    height: 90vmin;
-    background-size: cover;
-    background-color: "black";
+    height: 100%;
+  }
+  .MovieDetailsMainContainer {
+    height: 565px;
+  }
+  .scrolling-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: center;
+  }
+  .scrolling-wrapper .card {
+    display: inline-block;
+    width: 180px;
+    border: 2px solid grey;
+    background-color: orangered;
+    margin: 5px;
+    height: 220px;
+  }
+  .scrolling-wrapper .CastCard {
+    display: inline-block;
+    width: 140px;
+    word-wrap: "break-word";
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 5px;
+    height: 220px;
+  }
+  .scrolling-wrapper .CastCardRound {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 120px;
+    outline: none;
+    border-radius: 50%;
+    background-color: rgb(202, 83, 83);
+    margin: 5px;
+    height: 120px;
+  }
+  .scrolling-wrapper .CastCardRoundBtn {
+    width: 120px;
+    outline: none;
+    border-radius: 50%;
+    background-color: rgb(202, 83, 83);
+    height: 120px;
   }
 }
 @media only screen and (max-width: 500px) {
-    .img_container {
-        padding: 5%;
-      }
+  .img_container {
+    padding: 5%;
+  }
   .class_img {
+    padding-top: 30%;
     height: 90%;
-    width: 20vmax;
+    width: 15vmax;
   }
   .details_container {
-    float: center;
     padding: 5%;
     text-align: left;
   }
   .class_icon_container {
     width: 100%;
+    padding-left: 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .icon_lbl {
     font-size: 15px;
@@ -55,5 +102,34 @@
     height: 100%;
     background-size: cover;
     background-color: "black";
+  }
+  .MovieDetailsMainContainer {
+    height: 620px;
+  }
+  .scrolling-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10%;
+  }
+  .scrolling-wrapper .card {
+    display: inline-block;
+    width: 105px;
+    position: "center";
+    background-color: orangered;
+    margin: 5px;
+    height: 134px;
+  }
+  .scrolling-wrapper .CastCard {
+    display: inline-block;
+    width: 105px;
+    border-radius: 50%;
+    background-color: rgb(202, 83, 83);
+    margin: 5px;
+    height: 105px;
   }
 }

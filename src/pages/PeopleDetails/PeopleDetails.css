@@ -1,0 +1,75 @@
+@media only screen and (min-width: 500px) {
+.MainContainer{
+background: linear-gradient(rgba(200,22,0.3),rgb(8,17,24));
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+}
+.scrolling-wrap {
+  width: 90%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-left: 68px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.scrolling-wrap .card {
+  display: inline-block;
+  width: 180px;
+  background-color: #083839;
+  margin: 5px;
+  height: 220px;
+}
+.DeatailsContainer{
+  padding-top: 10%;
+  height: 67vmin;
+  width: 100%;
+}
+.cardPerson{
+  width: 150px;
+  height: 150px;
+  background-color: rgb(134, 17, 15);
+  border-radius: 50%;
+  margin-left: 45%;
+  background-size: cover
+}
+}
+
+@media only screen and (max-width: 500px) {
+  .MainContainer{
+    background: linear-gradient(rgb(200,22,0),rgb(8,17,24));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .scrolling-wrap {
+      width: 90%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+    }
+    .scrolling-wrap .card {
+      display: inline-block;
+      width: 120px;
+      background-color: #083839;
+      margin: 5px;
+      height: 180px;
+    }
+    .DeatailsContainer{
+      padding-top: 30%;
+      height: 120vmin;
+      width: 100%;
+    }
+    .cardPerson{
+      width: 100px;
+      height: 100px;
+      background-color: rgb(134, 17, 15);;
+      border-radius: 50%;
+      margin-left: 32%;
+      background-size: cover
+    }
+}

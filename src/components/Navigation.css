@@ -1,10 +1,41 @@
-.like_button{
- color: red;
+.movie_name {
+  height: 20px;
+  background-color: red;
 }
-.movie_name{
-height:20px;
-background-color: red;
+.hover_movie_name {
+  height: 0px;
 }
-.hover_movie_name{
-    height:0px;
+.class_search {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+  outline: 0;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 45px;
+}
+.DivSearch {
+  width: 52%;
+  background-color: rgba(244, 246, 253, 0.26);
+  border-radius: 4px;
+  margin-left: 24px;
+}
+.Searchicon {
+  float: left;
+  padding-left: 10px;
+}
+.input {
+  width: 92%;
+  float: left;
+  color: white;
+  font-weight: bold;
+  display: block;
+}
+.hideInput {
+  display: none;
 }

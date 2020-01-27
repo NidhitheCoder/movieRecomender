@@ -1,9 +1,9 @@
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
   .img_container {
     float: left;
-    padding: 5%;
-    padding-top: 10%;
-    height: 350px;
+    padding: 10%;
+    padding-right: 5%;
+    height: 250px;
   }
   .title_class {
     font-size: 48px;
@@ -11,19 +11,20 @@
   .details_container {
     float: center;
     padding: 5%;
-    padding-top: 10%;
+    padding-top: 8%;
     text-align: left;
   }
 
-  .class_img {
+  .class_imgPoster {
     height: 100%;
-    width: 18vmax;
+    width: 100%;
     border: 2px solid grey;
   }
   .class_icon_container {
     width: 53%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 3%;
   }
   .icon_lbl {
     font-size: 32px;
@@ -32,104 +33,190 @@
     height: 100%;
   }
   .MovieDetailsMainContainer {
-    height: 565px;
+    height: 500px;
+    padding-bottom: 3%;
   }
   .scrolling-wrapper {
-    width: 100%;
+    width: 95%;
     overflow-x: scroll;
     overflow-y: hidden;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     white-space: nowrap;
     position: center;
+    margin: 3%;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0%;
   }
   .scrolling-wrapper .card {
-    display: inline-block;
-    width: 180px;
-    border: 2px solid grey;
-    background-color: orangered;
-    margin: 5px;
-    height: 220px;
+    width: 95%;
+    height: 235px;
+    min-width: 140px;
+    border: 1px solid lightgrey;
+    text-decoration: none;
+    margin-bottom: 15%;
   }
-  .scrolling-wrapper .CastCard {
-    display: inline-block;
-    width: 140px;
-    word-wrap: "break-word";
+  .card:hover {
+    border: 1px solid gray;
+    position: relative;
+  }
+  .class_media {
+    height: 265px;
     outline: none;
-    background-color: rgba(255, 255, 255, 0);
-    margin: 5px;
-    height: 220px;
+    text-decoration: none;
+    color: orangered;
   }
-  .scrolling-wrapper .CastCardRound {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 120px;
-    outline: none;
-    border-radius: 50%;
-    background-color: rgb(202, 83, 83);
-    margin: 5px;
-    height: 120px;
-  }
-  .scrolling-wrapper .CastCardRoundBtn {
-    width: 120px;
-    outline: none;
-    border-radius: 50%;
-    background-color: rgb(202, 83, 83);
-    height: 120px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .img_container {
-    padding: 5%;
-  }
-  .class_img {
-    padding-top: 30%;
-    height: 90%;
-    width: 15vmax;
-  }
-  .details_container {
-    padding: 5%;
-    text-align: left;
-  }
-  .class_icon_container {
+
+  .class_Img {
     width: 100%;
-    padding-left: 10%;
+    height: 235px;
+  }
+  .action_container {
+    visibility: hidden;
+    background: #6a1261;
+  }
+  .Details_container {
+    visibility: hidden;
+    background: rgb(0, 0, 0);
+  }
+  .card:hover .action_container {
+    background: #6a1261;
+    visibility: visible;
+    height: 28px;
+    padding: 3%;
+    padding-left: 20%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card:hover .Details_container {
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    height: 230px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+   
+     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; 
+    font-weight: bold;
+  }
+}
+@media only screen and (max-width: 600px) {
+ 
+  .img_container {
+    padding: 10%;
+    padding-right: 5%;
+    height: 250px;
+  }
+  .title_class {
+    font-size: 32px;
+  }
+  .details_container {
+    padding: 10%;
+    padding-left: 15%;
+    padding-top: 8%;
+    text-align: left;
+  }
+
+  .class_imgPoster {
+    height: 100%;
+    width: 60%;
+    border: 2px solid grey;
+  }
+  .class_icon_container {
+    width: 80%;
+    display: grid;
+    grid-template-columns:1fr;
+    padding-top: 5%;
+    grid-gap: 10%;
   }
   .icon_lbl {
-    font-size: 15px;
+    font-size: 32px;
   }
   .main_container {
     height: 100%;
-    background-size: cover;
-    background-color: "black";
   }
   .MovieDetailsMainContainer {
-    height: 620px;
+    height: 730px;
+    padding-bottom: 3%;
   }
   .scrolling-wrapper {
-    width: 100%;
+    width: 95%;
+    height: auto;
     overflow-x: scroll;
     overflow-y: hidden;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 1fr ;
     white-space: nowrap;
     position: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 10%;
+    margin: 4%;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0%;
   }
   .scrolling-wrapper .card {
-    display: inline-block;
-    width: 105px;
-    position: "center";
-    background-color: orangered;
-    margin: 5px;
-    height: 134px;
+    width: 75%;
+    height: 235px;
+    min-width: 130px;
+    border: 1px solid lightgrey;
+    text-decoration: none;
+    margin-bottom: 15%;
   }
-  .scrolling-wrapper .CastCard {
-    display: inline-block;
-    width: 105px;
-    border-radius: 50%;
-    background-color: rgb(202, 83, 83);
-    margin: 5px;
-    height: 105px;
+  .card:hover {
+    border: 1px solid gray;
+    position: relative;
+  }
+  .class_media {
+    height: 265px;
+    outline: none;
+    text-decoration: none;
+    color: orangered;
+  }
+
+  .class_Img {
+    width: 100%;
+    height: 235px;
+  }
+  .action_container {
+    visibility: hidden;
+    background: #6a1261;
+  }
+  .Details_container {
+    visibility: hidden;
+    background: rgb(0, 0, 0);
+  }
+  .card:hover .action_container {
+    background: #6a1261;
+    visibility: visible;
+    height: 28px;
+    padding: 3%;
+    padding-left: 20%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card:hover .Details_container {
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    height: 230px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+   
+     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; 
+    font-weight: bold;
   }
 }

@@ -1,6 +1,14 @@
 import React from "react";
 import "/home/nidheesh/Videos/movie-recommender/src/pages/PeopleDetails/PeopleDetails.css";
+import Card from "@material-ui/core/Card";
+import Like from "@material-ui/icons/Favorite";
+import WatchLater from "@material-ui/icons/PlaylistAdd";
+import { Link } from "react-router-dom";
 let Details = () => {
+  const SimilarDemoArr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+  function sayHello() {
+    alert("hell");
+  }
   return (
     <div>
       <div className="DeatailsContainer">
@@ -20,41 +28,45 @@ let Details = () => {
       </div>
       <h2 style={{ position: "center" }}>Movies By Nazriya nazim</h2>
       <hr style={{ width: "90%" }} />
-      <div class="scrolling-wrap">
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-        <div class="card">
-          <h2>Card</h2>
-        </div>
-      </div>
+      <div class="scrolling-wrapper">
+      {SimilarDemoArr.map(No=>
+        <Card
+        className="card"
+        // onMouseEnter={props.MouseEnter}
+        // onMouseLeave={props.MouseLeave}
+      >
+        <Link 
+            to={{ pathname: "/movie/495ba90f-03da-4e4a-af09-5a36fabf3cce" }}
+          className="class_media"
+        >
+          <div
+            style={{
+              background:
+                "url(https://www.joblo.com/assets/images/oldsite/posters/images/full/Moana-Sing-Along-poster-1-large.jpg)",
+              backgroundSize: "cover"
+            }}
+            // src={Movie.images[0] ? Movie.images[0].url : noImage}
+            className="class_Img"
+          >
+            <div className="Details_container">
+              <span style={{ padding: "6%" }}>movie {No}</span>
+            </div>
+            <div className="action_container">
+              <Like
+                className={ "class_like"
+                }
+                onClick={sayHello}
+              ></Like>
+              <WatchLater
+                className="class_watchlater"
+                onClick={sayHello}
+              ></WatchLater>
+            </div>
+          </div>
+        </Link>
+      </Card>
+   )}
+     </div>
     </div>
   );
 };

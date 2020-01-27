@@ -1,8 +1,9 @@
 import React from "react";
 import "./movie_details.css";
-import Nav from "/home/nidheesh/Videos/movie-recommender/src/components/navigation";
+// import Nav from "/home/nidheesh/Videos/movie-recommender/src/components/navigation";
 import MovieDetails from "./MovieDetails";
 // import {test} from '../home/index/'
+
 
 class movie_Details extends React.Component {
   constructor(props) {
@@ -11,17 +12,22 @@ class movie_Details extends React.Component {
       Movies: []
     };
   }
+  FetchDetails = (MovieId) =>{
 
-  componentWillMount() {
     fetch(
       "https://cdn-discover.hooq.tv/v1.6/discover/titles/" +
-        this.props.match.params.id
+      MovieId
     )
       .then(response => response.json())
       .then(results => {
         this.setState({ Movies: results.data });
       });
   }
+  componentWillMount() {
+  
+    this.FetchDetails(this.props.match.params.id)
+  }
+  
   render() {
     let Movies = this.state.Movies;
     return (
@@ -34,13 +40,14 @@ class movie_Details extends React.Component {
           backgroundAttachment: "fixed"
         }}
       >
-        <Nav
+        {/* <Nav
           LikedButton={this.FetchLikedMoviesList}
           WatchLaterButton={this.FetchWatchLaterMoviesList}
           ListType={this.state.ListType}
           AllMovies={this.FetchAllMoviesList}
-        />
-        <MovieDetails Movies={Movies} />
+        /> */}
+        <MovieDetails Movies={Movies}
+        MovieId={this.FetchDetails} />
       </div>
     );
   }

@@ -9,6 +9,7 @@
     margin-top: 0px;
     padding-top: 80px;
     margin-bottom: 0%;
+    min-width: 900px;
     height: 100%;
   }
   .emptyContainer {
@@ -21,114 +22,75 @@
   }
   .class_card {
     width: 85%;
-    height: 265px;
-    border: 1px solid gray;
+    height: 320px;
+    min-width: 150px;
+    border: 1px solid lightgrey;
     text-decoration: none;
     margin-bottom: 15%;
   }
   .class_card:hover {
-    border: 1px solid lightgray;
-  }
-  .class_card:hover .class_media {
-    background-color: rgb(31, 28, 40);
+    border: 1px solid gray;
+    position: relative;
   }
   .class_media {
-    height: 265px;
+    height: 320px;
     outline: none;
-    transition-property: height;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
+    text-decoration: none;
+    color: orangered;
   }
 
   .img_class {
     width: 100%;
-    height: 265px;
-    opacity: 0.8;
+    height: 320px;
   }
   .class_card:hover .img_class {
-    width: 100%;
-    height: 225px;
-    opacity: 1;
-    transition-property: height;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
+    height: 266px;
   }
   .class_unlike {
-    color: gray;
+    color: green;
   }
   .class_like {
     color: red;
   }
   .class_watchlater {
-    color: green;
+    color: #41ff41;
   }
   .class_play {
     color: #081118;
   }
   .action_container {
     visibility: hidden;
-    background: rgb(31, 28, 40);
+    background: #6a1261;
+  }
+  .Details_container {
+    visibility: hidden;
+    background: rgb(0, 0, 0);
   }
   .class_card:hover .action_container {
-    background: rgb(31, 28, 40);
+    background: #6a1261;
     visibility: visible;
-    z-index: 2;
-    height: 28px;
+    height: 40px;
     padding: 3%;
     padding-left: 20%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: absolute;
+    bottom: 0;
   }
-  /* this is pop up styles */
-  .classDialog {
-    background-color: rgba(0, 0, 0, 0.2);
-    font-size: 15px;
-    line-height: 1.3;
-  }
-  .classDialogAction {
-    width: 584px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding-top: 0px;
-    box-shadow: 0px 0px 233px 140px rgb(132, 25, 25) inset;
-  }
-  .classDialogContent {
-    height: 100%;
-    width: 100%;
-    padding-top: 0px;
-  }
-  .playerContainer {
-    width: 520px;
+
+  .class_card:hover .Details_container {
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
     height: 320px;
-    padding-top: 0px;
-  }
-  .DetailsContainer {
-    width: 100%;
-    height: 100%;
-    text-align: left;
-  }
-  .spanStyle {
-    padding-right: 20px;
-  }
-  .SeeMoreStyle {
-    float: right;
-    color: green;
-    text-decoration: none;
-    font-weight: bolder;
-    outline: none;
-  }
-  .SimilarContentContainer {
-    width: 100%;
-    height: auto;
-    float: left;
-    margin-top: 12px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+   
+     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .SimilarCard {
-    background-color: gray;
-    margin: 5px;
-    height: 120px;
+    grid-template-columns: 1fr; 
+    font-weight: bold;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -138,14 +100,15 @@
     grid-column-gap: 15px;
     background-color: #081118;
     color: white;
-    margin: 10%;
-    margin-top: 4.5%;
+    padding-top: 30%;
+    margin-left: 10%;
     margin-bottom: 0%;
     height: 100%;
   }
   .class_card {
     width: 80%;
-    height: 180px;
+    height: 190px;
+    min-width: 115px;
     border: 1px solid gray;
     color: white;
     text-decoration: none;
@@ -157,30 +120,24 @@
   }
   .class_card:hover .class_media {
     background-color: rgb(31, 28, 40);
-    transition-property: height;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
   }
   .class_media {
     outline: none;
     border: none;
-    transition-property: height;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
+    text-decoration: none;
+    color: orangered;
+
   }
 
   .img_class {
     width: 100%;
-    height: 180px;
+    height: 190px;
     z-index: 0;
   }
   .class_card:hover .img_class {
     width: 100%;
-    height: 150px;
+    height: 190px;
     z-index: 0;
-    transition-property: height;
-    transition-duration: 0.4s;
-    transition-timing-function: linear;
   }
   .class_unlike {
     color: gray;
@@ -196,10 +153,14 @@
   }
   .action_container {
     visibility: hidden;
-    background: rgb(31, 28, 40);
+    background: #6a1261;
+  }
+  .Details_container {
+    visibility: hidden;
+    background: rgb(0, 0, 0);
   }
   .class_card:hover .action_container {
-    background: rgb(31, 28, 40);
+    background: #6a1261;
     visibility: visible;
     z-index: 2;
     height: 30px;
@@ -207,57 +168,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
-   /* this is pop up styles */
-   .classDialog {
-    background-color: rgba(0, 0, 0, 0.2);
-    font-size: 15px;
-    line-height: 1;
-  }
-  .classDialogAction {
-    width: 250px;
-    background-color: rgba(0, 0, 0, 177.9);
-    color: white;
-    padding: 0px;
-    box-shadow: 0px 0px 200px 140px rgb(132, 25, 25) inset;
-  }
-  .classDialogContent {
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-  }
-  .playerContainer {
-    width: 210px;
-    height: 125px;
-    padding-top: 0px;
-  }
-  .DetailsContainer {
-    width: 100%;
-    height: 100%;
-    text-align: left;
-  }
-  .spanStyle {
-    padding-right: 10px;
-  }
-  .SeeMoreStyle {
-    float: right;
-    color: green;
-    text-decoration: none;
-    font-weight: bolder;
-    outline: none;
-    margin-bottom: 10px;
-  }
-  .SimilarContentContainer {
-    width: 100%;
-    height: auto;
-    float: left;
-    margin-top: 12px;
+  .class_card:hover .Details_container {
+    background: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    height: 160px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-  }
-  .SimilarCard {
-    background-color: gray;
-    margin: 5px;
-    height: 120px;
+    grid-template-columns: 1fr; 
+    font-weight: bold;
   }
 }

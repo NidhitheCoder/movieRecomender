@@ -6,24 +6,10 @@ background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 }
-.scrolling-wrap {
-  width: 90%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding-left: 68px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.scrolling-wrap .card {
-  display: inline-block;
-  width: 180px;
-  background-color: #083839;
-  margin: 5px;
-  height: 220px;
-}
+
 .DeatailsContainer{
   padding-top: 10%;
-  height: 67vmin;
+  height: 69vmin;
   width: 100%;
 }
 .cardPerson{
@@ -33,6 +19,78 @@ background-repeat: no-repeat;
   border-radius: 50%;
   margin-left: 45%;
   background-size: cover
+}
+
+.scrolling-wrapper {
+  width: 95%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  white-space: nowrap;
+  position: center;
+  margin: 3%;
+  margin-top: 3%;
+  padding-bottom: 3%;
+  margin-bottom: 0%;
+}
+.scrolling-wrapper .card {
+  width: 95%;
+  height: 235px;
+  min-width: 140px;
+  border: 1px solid lightgrey;
+  text-decoration: none;
+  margin-bottom: 15%;
+}
+.card:hover {
+  border: 1px solid gray;
+  position: relative;
+}
+.class_media {
+  height: 265px;
+  outline: none;
+  text-decoration: none;
+  color: orangered;
+}
+
+.class_Img {
+  width: 100%;
+  height: 235px;
+}
+.action_container {
+  visibility: hidden;
+  background: #6a1261;
+}
+.Details_container {
+  visibility: hidden;
+  background: rgb(0, 0, 0);
+}
+.card:hover .action_container {
+  background: #6a1261;
+  visibility: visible;
+  height: 28px;
+  padding: 3%;
+  padding-left: 20%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  bottom: 0;
+}
+
+.card:hover .Details_container {
+  background: rgba(0, 0, 0, 0.8);
+  visibility: visible;
+  height: 230px;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+ 
+   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; 
+  font-weight: bold;
 }
 }
 
@@ -44,7 +102,7 @@ background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     }
-    .scrolling-wrap {
+    .scrolling-wrapper {
       width: 90%;
       overflow-x: scroll;
       overflow-y: hidden;
@@ -52,7 +110,7 @@ background-repeat: no-repeat;
       display: grid;
       grid-template-columns: 1fr 1fr ;
     }
-    .scrolling-wrap .card {
+    .scrolling-wrapper .card {
       display: inline-block;
       width: 120px;
       background-color: #083839;

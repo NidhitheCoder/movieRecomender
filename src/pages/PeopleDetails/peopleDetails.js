@@ -31,13 +31,13 @@ let Details = () => {
       <div class="scrolling-wrapper">
       {SimilarDemoArr.map(No=>
         <Card
-        className="card"
+        className="cardSimiler"
         // onMouseEnter={props.MouseEnter}
         // onMouseLeave={props.MouseLeave}
       >
         <Link 
-            to={{ pathname: "/movie/495ba90f-03da-4e4a-af09-5a36fabf3cce" }}
-          className="class_media"
+            to={{ pathname: "/movie/c3a4c614-00b4-45b3-856a-4f6e9c67d3aa" }}
+          className="class_mediapeople"
         >
           <div
             style={{
@@ -46,12 +46,12 @@ let Details = () => {
               backgroundSize: "cover"
             }}
             // src={Movie.images[0] ? Movie.images[0].url : noImage}
-            className="class_Img"
+            className="class_ImgPeople"
           >
-            <div className="Details_container">
+            <div className="Details_containerPeople">
               <span style={{ padding: "6%" }}>movie {No}</span>
             </div>
-            <div className="action_container">
+            <div className="action_containerPeople">
               <Like
                 className={ "class_like"
                 }

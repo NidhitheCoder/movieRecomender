@@ -35,41 +35,41 @@ background-repeat: no-repeat;
   padding-bottom: 3%;
   margin-bottom: 0%;
 }
-.scrolling-wrapper .card {
+.scrolling-wrapper .cardSimiler {
   width: 95%;
-  height: 235px;
+  height: 320px;
   min-width: 140px;
   border: 1px solid lightgrey;
   text-decoration: none;
   margin-bottom: 15%;
 }
-.card:hover {
+.cardSimiler:hover {
   border: 1px solid gray;
   position: relative;
 }
-.class_media {
-  height: 265px;
+.class_mediapeople {
+  height: 320px;
   outline: none;
   text-decoration: none;
   color: orangered;
 }
 
-.class_Img {
+.class_ImgPeople {
   width: 100%;
-  height: 235px;
+  height: 320px;
 }
-.action_container {
+.action_containerPeople {
   visibility: hidden;
   background: #6a1261;
 }
-.Details_container {
+.Details_containerPeople {
   visibility: hidden;
   background: rgb(0, 0, 0);
 }
-.card:hover .action_container {
+.cardSimiler:hover .action_containerPeople {
   background: #6a1261;
   visibility: visible;
-  height: 28px;
+  height: 40px;
   padding: 3%;
   padding-left: 20%;
   width: 100%;
@@ -79,10 +79,10 @@ background-repeat: no-repeat;
   bottom: 0;
 }
 
-.card:hover .Details_container {
+.cardSimiler:hover .Details_containerPeople {
   background: rgba(0, 0, 0, 0.8);
   visibility: visible;
-  height: 230px;
+  height: 270px;
   text-align: center;
   justify-content: center;
   align-content: center;

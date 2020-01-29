@@ -63,14 +63,14 @@ const MovieDetails = props => {
 
         {SimilarDemoArr.map(Movie => (
           <Card
-            className="card"
+            className="cardSimiler"
             onMouseEnter={props.MouseEnter}
             onMouseLeave={props.MouseLeave}
           >
             <div 
             onClick={()=>props.MovieId("2c0b9a63-c850-459b-abea-4e21ee37cceb")}
                 // to={ "/movie/495ba90f-03da-4e4a-af09-5a36fabf3cce" }
-              className="class_media"
+              className="class_mediaDetails"
             >
               <div
                 style={{
@@ -79,12 +79,12 @@ const MovieDetails = props => {
                   backgroundSize: "cover"
                 }}
                 // src={Movie.images[0] ? Movie.images[0].url : noImage}
-                className="class_Img"
+                 className="class_ImgDetails"
               >
-                <div className="Details_container">
+                <div className="Details_containerDetails">
                   <span style={{ padding: "6%" }}>movie</span>
                 </div>
-                <div className="action_container">
+                <div className="action_containerDetails">
                   <Like
                     className={
                       props.ListType === "Liked" ? "class_like" : "class_Unlike"

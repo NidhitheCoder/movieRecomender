@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const listContiner = props => {
   function sayHello() {
-    alert("hell");
+    alert("hello");
   }
   let Movieso = props.array;
   return (
@@ -17,7 +17,7 @@ const listContiner = props => {
 
       {Movieso.map(Movie => (
         <Card
-          className="class_card"
+          className="class_cardList"
           onMouseEnter={props.MouseEnter}
           onMouseLeave={props.MouseLeave}
         >

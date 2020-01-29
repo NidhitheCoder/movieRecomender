@@ -12,33 +12,37 @@ import SearchIcon from "@material-ui/icons/Search";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Like from "@material-ui/icons/Favorite";
 import WatchLater from "@material-ui/icons/PlaylistAdd";
-import Home from "@material-ui/icons/Home"
+import Home from "@material-ui/icons/Home";
 import MoreIcon from "@material-ui/icons/MoreVert";
-
 
 class Navigationbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      anchorEl: null,
+      anchorEl: null
     };
   }
-  
+
   render() {
-
-
+    const path=window.location.pathname;
+    console.log(this.props.location)
     const handleClick = event => {
-    this.setState({anchorEl:event.currentTarget})
-    };
-  
-    const handleClose = () => {
-      this.setState({anchorEl:null})
+      this.setState({ anchorEl: event.currentTarget });
     };
 
-    const Search=()=>{
-    alert("hiii")
-    }
+    const handleClose = () => {
+      this.setState({ anchorEl: null });
+    };
+    const open = Boolean(this.state.anchorEl);
+    const Search = () => {
+      console.log(window.location.pathname);
+    };
     const isMobile = window.innerWidth <= 500;
+
+    const Logout=()=>{
+        localStorage.clear();
+        window.location.href = '/';
+    }
     return (
       <div style={{ paddingRight: "0px" }}>
         <AppBar
@@ -52,7 +56,7 @@ class Navigationbar extends React.Component {
             <div className="DivSearch">
               <SearchIcon className="Searchicon" />
               <InputBase
-              onClick={Search}
+                onClick={Search}
                 style={{ color: "White" }}
                 placeholder="Search…"
                 inputProps={{ "aria-label": "search" }}
@@ -70,23 +74,39 @@ class Navigationbar extends React.Component {
                   <MoreIcon />
                 </IconButton>
               </div>
-            ) : (
-              <div style={{ float: "right", width: "30%" }}>
-                  <IconButton
-                 onClick={this.props.AllMovies}
+            ) : path==='/'?
+            (
+              <div style={{ float: "right", width: "531px" }}>
+                <IconButton
+                  onClick={()=>{ 
+                    localStorage.clear();
+                    window.location.href = '/home'
+                   }}
                   style={{
-                    color:
-                      this.props.ListType === "ALL" ? "red" : "lightgrey",
-                    marginLeft: "46%"
+                    color: this.props.ListType === "ALL" ? "red" : "lightgrey",
+                    marginLeft: "50%"
                   }}
                 >
                   <Home className="like_button" />
                 </IconButton>
+              </div>
+            )
+            :
+            (
+              <div style={{ float: "right", width: "531px" }}>
+                <IconButton
+                  onClick={this.props.AllMovies}
+                  style={{
+                    color: this.props.ListType === "ALL" ? "red" : "lightgrey",
+                    marginLeft: "50%"
+                  }}
+                >
+                  <Home className="like_button" />
+                </IconButton> 
                 <IconButton
                   onClick={this.props.LikedButton}
                   style={{
-                    color:
-                      this.props.ListType === "Liked" ? "red" : "lightgrey"
+                    color: this.props.ListType === "Liked" ? "red" : "lightgrey"
                   }}
                 >
                   <Like className="like_button" />
@@ -103,26 +123,33 @@ class Navigationbar extends React.Component {
                   <WatchLater />
                 </IconButton>
                 <IconButton
-                aria-controls="simple-menu" 
-                onClick={handleClick}
+                  aria-controls="simple-menu"
+                  onClick={handleClick}
                   aria-haspopup="true"
                   color="inherit"
                 >
                   <AccountCircle />
-                  <Menu
-        id="simple-menu"
-        anchorEl={this.state.anchorEl}
-        keepMounted
-        style={{marginTop:'2%'}}
-        open={this.state.anchorEl}
-        onClose={handleClose}
-  
-      >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
-  </IconButton>
+                </IconButton>
+                <Menu
+                  style={{ marginTop: "2%" }}
+                  id="menu-appbar"
+                  anchorEl={this.state.anchorEl}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  open={open}
+                  onClose={handleClose}
+                >
+                  <MenuItem onClick={handleClose}>Profile</MenuItem>
+                  <MenuItem onClick={handleClose}>My account</MenuItem>
+                  <MenuItem onClick={Logout}>Logout</MenuItem>
+                </Menu>
               </div>
             )}
           </Toolbar>
